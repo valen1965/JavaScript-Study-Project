@@ -1,36 +1,13 @@
-// This is my first JavaScript code!
-console.log('Hellow World');
+let name = 'Mosh'; //String literal
+let age = '30'; //Number literal
+let isApproved = trues; //Boolean literal
+let firstName; // if not initialized that Underfined literal
+let lastname = null; // Null literal ( used when we need explicitely clear value of a variable) 
 
-//1- Variables 
+// 3 - Primitive types
 
-//lately expression var to declare variable is no longer used
-// expression let is therfore used to declare variables.
-let name ='Vlad'; 
-console.log(name);
-
-//A few rules for variable declaration:
-
-//1-cann not be a reserved keyword.
-//2-should be meaningful
-//3-can not start with a number
-//4-can not contain a space of hyphen (-)
-//5-are case sensitive
-//6-if we need to declare a few variables we can do this this
-// in single line, separated by coma
-
-//  let firstName = 'Mosh', lastName = 'Hamedani';
-
-//however, modern best parctice is to declare each variable ona new line:
-
-let firstName = 'Mosh';
-let lastName = 'Hamedani';
-
-//2 - Constants
-
-
-const interestRate = 0.3;
-interestRate = 1;
-console.log(interestRate);
-
-// if you need to re-assigne value - use atribute let:
-// if you do not need to re-assign values - use atribute const: 
+// String
+//Number
+//Boolean
+//undefined
+//null
