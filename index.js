@@ -24,3 +24,13 @@ console.log(name);
 
 let firstName = 'Mosh';
 let lastName = 'Hamedani';
+
+//2 - Constants
+
+
+const interestRate = 0.3;
+interestRate = 1;
+console.log(interestRate);
+
+// if you need to re-assigne value - use atribute let:
+// if you do not need to re-assign values - use atribute const: 
