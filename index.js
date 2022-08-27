@@ -1,8 +1,10 @@
 
-let x = 10;
+let x = 1;
+// Relational operators
+console.log(x > 0);
+console.log(x < 0);
+console.log(x >= 0);
 
-x = x + 5;
-x += 5;
-
-x = x * 3;
-x *= 3;
+// Equality operators
+console.log(x===1);
+console.log(x!==1);
