@@ -1,8 +1,21 @@
 
-// Operators Precedence 
+// Swapping Variables
+let a = 'red';
+let b = 'blue';
 
-let x = 2 + 3 * 4;
-console.log(x);
+console.log(a);
+console.log(b); 
 
-let y = (2 + 3) * 4;
-console.log(y);
+let c = a; //red
+console.log(c);
+a = b; //blue
+console.log(a = b);
+b = c; //red
+console.log(b = c);
+
+console.log(a);
+console.log(b);
+
+
+
+
