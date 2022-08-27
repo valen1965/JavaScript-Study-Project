@@ -1,14 +1,18 @@
-// Performing a task
-function greet(name, lastName){
-    console.log('Hello ' + name + ' ' + lastName)
-}
 
+let x = 10;
+let y = 3;
 
-// Calculate a value
-function square(number) {
-    return number * 12 ;
-}
+// console.log(x + y);
+// console.log(x - y);
+// console.log(x * y);
+// console.log(x / y);
+// console.log(x % y);
+// console.log(x ** y);
 
-console.log(square(2));
+// Increment (++)
+// console.log(x++);
+// console.log(x);
 
-// Function is a statement that either perfroms a task or calculates a value.
+// Decrement (--)
+console.log(--x);
+console.log(x--);
