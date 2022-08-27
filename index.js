@@ -1,4 +1,14 @@
+// Performing a task
+function greet(name, lastName){
+    console.log('Hello ' + name + ' ' + lastName)
+}
 
-let selectedColors = ['red', 'blue'];
-selectedColors[2] = 1;
-console.log(selectedColors.length);
+
+// Calculate a value
+function square(number) {
+    return number * 12 ;
+}
+
+console.log(square(2));
+
+// Function is a statement that either perfroms a task or calculates a value.
