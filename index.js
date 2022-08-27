@@ -1,9 +1,10 @@
+// Logival OR (||)
+//Returns TRUE if one of the operands is TRUE
+let highIncome = false;
+let goodCreditScore = false;
+let eligibleForLoan = highIncome || goodCreditScore;
+console.log('Eligible', eligibleForLoan);
 
-// If a customer has more that 100 points
-// they are a 'gold' customer, otherwise
-//they are a 'silver' customer.
-
-let points = 110;
-let type = points > 100 ? 'gold': 'silver';
-
-console.log(type);
+//NOT (!)
+let applicationRefused = !eligibleForLoan;
+console.log('Application Refused', applicationRefused);
