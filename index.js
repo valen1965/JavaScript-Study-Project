@@ -1,32 +1,20 @@
-// Option 1
 
-// let num1 = 35;
-// let num2 = 20;
+// Exercise Landscape or Portrait
+// let screen = isLandscape (90, 50);
+// console.log(screen);
 
-// if (num1 > num2)
-//     console.log(num1);
-//     else console.log(num2);
+// function isLandscape (width, height) {
+// return (width < height) ? 'Portrait': 'Landscape';
+// }
 
-// Option 2
+// console.log(isLandscape(800, 600));
 
-// let number = max(234, 234);
-// console.log(number);
+// function isLandscape(width, height) {
+//     return (width > height) ? true : false;
+// }
 
-// function max (num1, num2) {
-//     if (num1 > num2) return num1;
-//     else return num2; 
-// }   
+console.log(isLandscape(500, 600));
 
-// function max (num1, num2) {
-//   if (num1 > num2) return num1;
-//   return num2; 
-// }   
-
-// Final clean option
-
-let number = max(41, 24);
-console.log(number);
-
-function max (num1, num2) {
-return (num1 > num2) ? num1: num2;
+function isLandscape(width, height) {
+    return (width > height);
 }
