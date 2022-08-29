@@ -1,21 +1,25 @@
 
-// Exercise Landscape or Portrait
-// let screen = isLandscape (90, 50);
-// console.log(screen);
+// Divisible by 3 => Fizz
+// Divisible by 5 => Buzz
+// Divisible by both 3 & 5 => FizzBuzz
+// Not divisible by 3 or 5 => input
+// Not a number => 'Not a number'
 
-// function isLandscape (width, height) {
-// return (width < height) ? 'Portrait': 'Landscape';
-// }
+function fizzBuzz(input) {
+    if (typeof input !== 'number') {
+        return NaN  //'Not a number';
+    }
+    if ((input % 3 === 0) && (input % 5 === 0)) {
+        return 'FizzBuzz';
+    }
+    if (input % 3 === 0) {
+        return 'Fizz';
+    }
+    if (input % 5 === 0) {
+        return 'Buzz';
+    }
+    return input;
+};
 
-// console.log(isLandscape(800, 600));
-
-// function isLandscape(width, height) {
-//     return (width > height) ? true : false;
-// }
-
-//
-console.log(isLandscape(500, 600));
-
-function isLandscape(width, height) {
-    return (width > height);
-}
+const output = fizzBuzz(15);
+console.log(output);
