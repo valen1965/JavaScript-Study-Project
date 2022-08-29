@@ -1,44 +1,21 @@
-// Exercise - Speed Limit
+// Exercise - Even and Odd numbers.
 
-// Speed Limit = 70
-// 5 -> 1 point
-// math.floor(1.3)
-// 12 pints -> suspended.
+showNumbers(9)
 
+// option 1
 
-const speedLimit = 70;
-const kmPerPoint = 5;
-const output = checkSpeed(120)
+// function showNumbers(limit){
+//     for (let i = 0; i <= limit; i++) {
+//         if (i % 2 === 0) console.log(i, 'EVEN');
+//         else console.log(i, 'ODD');
+//     }    
+// }
 
-console.log(output)
+// option 2 - cleaner code
 
-// function checkSpeed(speed) {
-    
-//     if (speed < speedLimit + kmPerPoint) {
-//         return ('Ok');
-//     }
-//     else {
-//         const points = Math.floor ((speed - speedLimit) / kmPerPoint);
-//         if (points >= 12) 
-//             return ('License suspended');
-//         else
-//             return ('Points ' +  points);
-//     }
-// }  
-
-
-// making code cleaner
-
-function checkSpeed(speed) {
-    
-    if (speed < speedLimit + kmPerPoint) {
-        return ('Ok');
-        return;
-    }
-    const points = Math.floor ((speed - speedLimit) / kmPerPoint);
-    if (points >= 12) 
-        return ('License suspended');
-    else
-        return ('Points ' +  points);
-    }
- 
+function showNumbers(limit) {
+    for (let i = 0; i <= limit; i++){
+        const message = (i % 2 === 0) ? 'EVEN': 'ODD';
+        console.log(i, message);
+    }  
+}
