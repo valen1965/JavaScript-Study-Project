@@ -1,21 +1,17 @@
-// Exercise - Even and Odd numbers.
 
-showNumbers(9)
+// Exercise  - Count Truthy
 
-// option 1
 
-// function showNumbers(limit){
-//     for (let i = 0; i <= limit; i++) {
-//         if (i % 2 === 0) console.log(i, 'EVEN');
-//         else console.log(i, 'ODD');
-//     }    
-// }
+const array = [NaN, 11, 9, 2, null, false, ''];
 
-// option 2 - cleaner code
+console.log(countTruthy(array));
 
-function showNumbers(limit) {
-    for (let i = 0; i <= limit; i++){
-        const message = (i % 2 === 0) ? 'EVEN': 'ODD';
-        console.log(i, message);
-    }  
-}
+
+function countTruthy(array){
+    let count =0;
+    for (let value of array )
+       if (value)
+        count++;
+    return count;    
+    }
+    
