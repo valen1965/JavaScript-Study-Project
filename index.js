@@ -1,21 +1,18 @@
 
-// Exercise  - String Properties.
+// Exercise  - Sum of multiples of 3 and 5
 
-const movie = {
-    title: 'a',
-    releaseYear: 2018,
-    rating: 5.7,
-    director: 'd'
-};
+//multiples of 3: 3,6,9
+//multiples of 5: 5,10
 
-showProperties(movie);
+const multiple = sum(10) 
+console.log(multiple);
 
+function sum(limit){
+  let sum = 0;
 
-function showProperties(obj) {
-  for (let key in obj) {
-    if (typeof obj[key] === 'string') // "obj[]" to get value of a property
-      console.log(key, obj[key]);
-    } 
+  for (let i = 0; i <= limit; i++) 
+    if (i % 3 === 0 || i % 5 === 0)
+      sum += i;
+  
+  return sum;
 }
-
-
