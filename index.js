@@ -1,17 +1,21 @@
 
-// Exercise  - Count Truthy
+// Exercise  - String Properties.
+
+const movie = {
+    title: 'a',
+    releaseYear: 2018,
+    rating: 5.7,
+    director: 'd'
+};
+
+showProperties(movie);
 
 
-const array = [NaN, 11, 9, 2, null, false, ''];
+function showProperties(obj) {
+  for (let key in obj) {
+    if (typeof obj[key] === 'string') // "obj[]" to get value of a property
+      console.log(key, obj[key]);
+    } 
+}
 
-console.log(countTruthy(array));
 
-
-function countTruthy(array){
-    let count =0;
-    for (let value of array )
-       if (value)
-        count++;
-    return count;    
-    }
-    
