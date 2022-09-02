@@ -1,27 +1,14 @@
 
 // Chapter OBJECTS
-// 3- Constructor Functions
-// Camel Notation : oneTwoThreeFour
-//Pascal Notation:  OneTwoThreeFour ( used in Constructor Functions )
+// 4 - Dynamic Nature of Objects;
 
-function createCircle(radius) {
-  return {
-    radius,
-    draw() {
-      console.log('draw');
-    }
-  };
-}
+const circle = {
+  radius:1
+};
 
-const myCircle = createCircle(1);
+circle.color = 'yellow';
+circle.draw = function(){}
 
-// Constructor Function
+delete circle.draw;
 
-function Circle(radius) {
-  this.radius = radius;
-  this.draw = function() {
-    console.log('draw');
-  }
-}
-
-const circle = new Circle(1);
+console.log(circle);
