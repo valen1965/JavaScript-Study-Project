@@ -1,20 +1,22 @@
 
-// 15 - Excercise 1 - Address Object.
+// 15 - Excercise 2 - Factory and Constructor Function.
 
-// street
-// city
-// zipCode
-// showAddress(address)
+// let address = createAddress('sivash', 'kherson', 73000);
+// console.log(address);
+// // Factory Function
+// function createAddress(street, city, zipCode) {
+//   return {
+//     street,
+//     city,
+//     zipCode,
+//   };
+// }
 
-const address = {
-  street: 'alfa',
-  city: 'Kherson',
-  zipCode: 73000,
-};
-
-function showAddress(address) {
-  for (let key in address)
-    console.log(key, address[key]);
+//Constructor Function
+function Address (street, city, zipCode){
+  this.street = street;
+  this.city = city;
+  this.zipCode = zipCode;
 }
-
-showAddress(address);
+const address = new Address('a', 'b', 'c');
+console.log(address);
