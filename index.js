@@ -1,27 +1,27 @@
 
-// Exercise  - Prime Numbers
+// Chapter OBJECTS
+// 1- Basics
 
-// Prime =- whose factor is 1 and itself
-// Composite
+// let radius = 1;
+// let x =1;
+// let y =1;
 
-// 12 = 1, 2, 3, 4, 6, 12
+// Object-oriented Programming (OOP)
+//OOP - is basicle style of programming, where we see a programm as a collection
+//of objects that talk to each other to perfrom some functionality.
 
-// 11 = 1, 11
+// if a function is a part of an object, we call that function 'a method'
 
-// can be divided evenly by its factors
-
-showPrimes(20)
-
-function showPrimes(limit) {
-  for (let number = 2; number <= limit; number++) {
-
-    let isPrime = true;
-    for (let factor = 2; factor < number; factor++) {
-      if (number % factor === 0) {
-        isPrime = false;
-        break;
-      }
-    }
-    if (isPrime) console.log(number);
+const circle = {
+  radius: 1,
+  location: {
+    x: 1,
+    y: 1
+  },
+  isVisible: true,
+  draw: function() {
+    console.log('draw');
   }
-}
+};
+
+circle.draw(); // Method
