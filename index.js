@@ -1,23 +1,35 @@
 
 // Chapter OBJECTS
-// 6 - Functions are Objects;
+// 7 - Value Type vs Reference Type;
 
-function Circle(radius) {
-  this.radius = radius;
-  this.draw = function() {
-    console.log('draw');
-  }
+// Value Type
+// Number
+// String
+// Boolean
+// Symbol
+// Undefined
+// null
+
+// Reference Type
+// Objects
+// Functions
+// Arrays
+
+// let x = 10;
+// let y = x;
+
+// x = 20;
+
+// let x = { value: 10 };
+// let y = x;
+
+// x.value = 20;
+
+let obj = { value: 10 };
+
+function increase(obj) {
+  obj.value++;
 }
 
-// const Circle1 = new Function('radius', ` 
-//   this.radius = radius;
-//   this.draw = function() {
-//     console.log('draw');
-// }  
-// `);
-// const circle = new Circle1(1);
-
-Circle.call({}, 1)  // it is ssame expression like in line 22
-Circle.apply({}, [1])
-
-const another = new Circle(1);
+increase(obj);
+console.log(obj);
