@@ -1,9 +1,20 @@
 
-// Chapter OBJECTS
-// 14 - Date object.
+// 15 - Excercise 1 - Address Object.
 
-const now = new Date();
-const date1 = new Date('May 11 2018 09:00');
-const date2 = new Date(2018, 4, 11, 9);
+// street
+// city
+// zipCode
+// showAddress(address)
 
-now.setFullYear(2017);
+const address = {
+  street: 'alfa',
+  city: 'Kherson',
+  zipCode: 73000,
+};
+
+function showAddress(address) {
+  for (let key in address)
+    console.log(key, address[key]);
+}
+
+showAddress(address);
