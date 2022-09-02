@@ -1,35 +1,21 @@
 
 // Chapter OBJECTS
-// 7 - Value Type vs Reference Type;
+// 8 - Enumerating Properties of an object;
 
-// Value Type
-// Number
-// String
-// Boolean
-// Symbol
-// Undefined
-// null
+const circle = {
+  radius: 1,
+  draw() {
+    console.log('draw');
+  }
+};
 
-// Reference Type
-// Objects
-// Functions
-// Arrays
+for (let key in circle)
+  console.log(key, circle[key]);
 
-// let x = 10;
-// let y = x;
+for (let key of Object.keys(circle))
+  console.log(key);  
 
-// x = 20;
+for (let entry of Object.entries(circle))
+  console.log(entry);  
 
-// let x = { value: 10 };
-// let y = x;
-
-// x.value = 20;
-
-let obj = { value: 10 };
-
-function increase(obj) {
-  obj.value++;
-}
-
-increase(obj);
-console.log(obj);
+if ('radius' in circle) console.log('yes');  
