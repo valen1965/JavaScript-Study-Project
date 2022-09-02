@@ -1,27 +1,19 @@
 
 // Chapter OBJECTS
-// 1- Basics
+// 2- Factory Functions
 
-// let radius = 1;
-// let x =1;
-// let y =1;
+function createCircle(radius) {
+  return {
+    radius,
+    draw() {
+      console.log('draw');
+    }
+  };
+}
 
-// Object-oriented Programming (OOP)
-//OOP - is basicle style of programming, where we see a programm as a collection
-//of objects that talk to each other to perfrom some functionality.
+const circle1 = createCircle(1);
+console.log(circle1); 
 
-// if a function is a part of an object, we call that function 'a method'
+const circle2 = createCircle(2);
+console.log(circle2);
 
-const circle = {
-  radius: 1,
-  location: {
-    x: 1,
-    y: 1
-  },
-  isVisible: true,
-  draw: function() {
-    console.log('draw');
-  }
-};
-
-circle.draw(); // Method
