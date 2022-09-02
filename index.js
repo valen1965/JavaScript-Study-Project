@@ -1,10 +1,20 @@
 
 // Chapter OBJECTS
-// 12 - String Object.
+// 13 - Template Literals.
 
 // string primitive
-const message = 'This is my\n first message';
 
-// String object
-const another = new String('h1')
+// Object literals {}
+// Boolean literals true or false
+// String literals '', ""
+// Template literals ``
 
+const name = 'John';
+const message = 'Hi ' + name + ',\n';
+
+const another =
+`Hi ${name} ${2 + 3}, 
+Thanks you for joining my mailing list.
+
+Regards,
+Mosh`;
