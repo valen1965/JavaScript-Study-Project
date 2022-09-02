@@ -1,6 +1,8 @@
 
 // Chapter OBJECTS
-// 2- Factory Functions
+// 3- Constructor Functions
+// Camel Notation : oneTwoThreeFour
+//Pascal Notation:  OneTwoThreeFour ( used in Constructor Functions )
 
 function createCircle(radius) {
   return {
@@ -11,9 +13,15 @@ function createCircle(radius) {
   };
 }
 
-const circle1 = createCircle(1);
-console.log(circle1); 
+const myCircle = createCircle(1);
 
-const circle2 = createCircle(2);
-console.log(circle2);
+// Constructor Function
 
+function Circle(radius) {
+  this.radius = radius;
+  this.draw = function() {
+    console.log('draw');
+  }
+}
+
+const circle = new Circle(1);
