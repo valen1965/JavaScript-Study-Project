@@ -1,6 +1,6 @@
 
 // Chapter OBJECTS
-// 8 - Enumerating Properties of an object;
+// 9 - Cloning an object.
 
 const circle = {
   radius: 1,
@@ -9,13 +9,13 @@ const circle = {
   }
 };
 
-for (let key in circle)
-  console.log(key, circle[key]);
+// const another = {};
+//   for (let key in circle) 
+//     another[key] = circle[key];
+  
+//const another = Object.assign({}, circle); // copies properties or methods from one or more source objects, or combine a few objects into a target object.  
 
-for (let key of Object.keys(circle))
-  console.log(key);  
+const another = {...circle}; // spread operator is used to clone all properties and methods and put them into another object. 
 
-for (let entry of Object.entries(circle))
-  console.log(entry);  
+console.log(another);  
 
-if ('radius' in circle) console.log('yes');  
