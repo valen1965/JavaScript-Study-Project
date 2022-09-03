@@ -1,13 +1,30 @@
 // ARRAYS
-// 11 - Joining Arrays.
+// 12 - Sorting Arrays.
 
-const numbers = [1, 2, 3,];
-const joined = numbers.join(' / ');
-console.log(joined);
+// const numbers = [2, 3, 1];
+// numbers.sort();
+// console.log(numbers);
 
-const message = 'This is my first message';
-const parts = message.split(' ');
-console.log(parts);
+// numbers.reverse();
+// console.log(numbers);
 
-const combined = parts.join('--');
-console.log(combined);
+const courses = [
+  { id: 1, name:'Node.js' },
+  { id: 2, name: 'javaScript' },
+];
+
+courses.sort(function(a, b) {
+  // a > b => -1
+  // a < b => 1
+  // a === b => 0
+
+  // converting to upper case
+  const nameA = a.name.toUpperCase();
+  const nameB = b.name.toUpperCase();
+
+  if (nameA < nameB) return -1;
+  if (nameA > nameB) return 1;
+  return 0;
+});
+
+console.log(courses);
