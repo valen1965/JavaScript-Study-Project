@@ -1,25 +1,15 @@
 // ARRAYS
-// 07 - Empting an array..
+// 08 - Combining and Splicing Arrays.
 
-let numbers = [1, 2, 3, 4];
-let another = numbers;
-// Solution 1
-// numbers = [];
-// console.log(another);
+// const first = [1, 2, 3,];
+const first = [{ id: 1}];
+const second = ['a', 'b', 'c'];
 
-//Solution 2
-// numbers.length = 0;
-// console.log(another);
-// console.log(numbers);
 
-//Solution 3
-// numbers.splice(0, numbers.length);
-// console.log(another);
-// console.log(another);
+const combined = first.concat(second);
+first[0].id = 10;
+ 
+const slice = combined.slice(0);
 
-//Solution 4
-while (numbers.length > 0)
-numbers.pop();
-
-console.log(numbers);
-console.log(another);
+console.log(combined);
+console.log(slice);
