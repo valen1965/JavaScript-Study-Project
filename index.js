@@ -1,14 +1,18 @@
+// ARRAYS
+// 02 - Adding Elements (Primitives)
 
-// 20 - Excercise 6 - Price range Object.
+const numbers = [3, 4];
 
-let priceRanges = [
-  {label:'$', tooltip: 'Inexpensive', minPerPerson: 0, maxPerPerson: 10 },
-  {label:'$$', tooltip: 'Moderate', minPerPerson: 11, maxPerPerson: 20 },
-  {label:'$$$', tooltip: 'Expensive', minPerPerson: 21, maxPerPerson: 50 },
-];
+// Adding elements into an array
+//=================================
+// End
+numbers.push(5, 6);
+console.log(numbers);
 
-let restaurants = [
-  {averagePerPerson: 5 }
-];
+// Begining
+numbers.unshift(1, 2);
+console.log(numbers);
 
-console.log(priceRanges);
+// Middle
+numbers.splice(2, 0, 'a', 'b');
+console.log(numbers);
