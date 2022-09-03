@@ -1,27 +1,25 @@
 // ARRAYS
-// 06 - Removing elements.
+// 07 - Empting an array..
 
-const numbers = [1, 2, 3, 4];
+let numbers = [1, 2, 3, 4];
+let another = numbers;
+// Solution 1
+// numbers = [];
+// console.log(another);
 
-// Adding an element
-// End
-numbers.push()
-// Beginning
-numbers.unshift()
-// Middle
-numbers.splice()
-
-
-// Removing an element
-// End
-// const last = numbers.pop();
+//Solution 2
+// numbers.length = 0;
+// console.log(another);
 // console.log(numbers);
-// console.log(last);
 
-// Beginning
-// const first = numbers.shift();
-// console.log(first);
+//Solution 3
+// numbers.splice(0, numbers.length);
+// console.log(another);
+// console.log(another);
 
-// Middle
-numbers.splice(2, 2);
+//Solution 4
+while (numbers.length > 0)
+numbers.pop();
+
 console.log(numbers);
+console.log(another);
