@@ -1,14 +1,17 @@
 // ARRAYS
-// 09 - Spread Operator. ( ES6 - ECMASript 6 )
+// 10 - Iterating an Array.
 
-const first = [1, 2, 3,];
-const second = ['a', 'b', 'c'];
+const numbers = [1, 2, 3,];
 
-// const combined = first.concat(second);
-const combined = [...first, 'a', ...second, 'b'];
+// for(let number of numbers)
+//   console.log(number);
 
-// const copy = combined.slice(0);
-const copy = [...combined, 'D'];
+// numbers.forEach(function(number){
+//   console.log(number);
+// })  
 
-console.log(combined);
-console.log(copy);
+numbers.forEach((number, index) => console.log(index, number)); 
+
+
+for (let key in numbers)
+  console.log(key, numbers[key]);
