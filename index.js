@@ -1,27 +1,27 @@
 // ARRAYS
-// 05 - Arrow Functions
+// 06 - Removing elements.
 
-// In ES6 there is a shorter and cleaner way to write the same code using Arrow Functions. Wherner you want to pass a function as a callback function or as an argument for a differenet method, use the arrow function syntax.
+const numbers = [1, 2, 3, 4];
 
-
-const courses = [
-  { id: 1, name: 'a' },
-  { id: 2, name: 'b' },
-];
-
-const course = courses.findIndex(course => course.name === 'b');
-
-console.log(course);
-
-const cours = courses.find(cours => cours.name === 'a');
-
-console.log(cours);
+// Adding an element
+// End
+numbers.push()
+// Beginning
+numbers.unshift()
+// Middle
+numbers.splice()
 
 
-// Finding Elelents (reference type) using function sytax;
+// Removing an element
+// End
+// const last = numbers.pop();
+// console.log(numbers);
+// console.log(last);
 
-const cour = courses.find(function(cour) {
-  return cour.name === 'a';  
-});
+// Beginning
+// const first = numbers.shift();
+// console.log(first);
 
-console.log(cour);
+// Middle
+numbers.splice(2, 2);
+console.log(numbers);
