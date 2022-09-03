@@ -1,15 +1,14 @@
 // ARRAYS
-// 08 - Combining and Splicing Arrays.
+// 09 - Spread Operator. ( ES6 - ECMASript 6 )
 
-// const first = [1, 2, 3,];
-const first = [{ id: 1}];
+const first = [1, 2, 3,];
 const second = ['a', 'b', 'c'];
 
+// const combined = first.concat(second);
+const combined = [...first, 'a', ...second, 'b'];
 
-const combined = first.concat(second);
-first[0].id = 10;
- 
-const slice = combined.slice(0);
+// const copy = combined.slice(0);
+const copy = [...combined, 'D'];
 
 console.log(combined);
-console.log(slice);
+console.log(copy);
