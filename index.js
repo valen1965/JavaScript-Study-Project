@@ -1,32 +1,28 @@
 // ARRAYS
-// 15 - Mapping an Array.
+// 16 - Reducing an Array.
 
-const numbers = [1, -1, 2, 3];
+const numbers = [1, 15, 22, 3];
 
-// const filtered = numbers.filter(value => value  >= 0);
-// console.log(items);
-
-// const items = filtered.map(value => '<li>' + value + '<li>')
-// const html = '<ul>' +  items.join('') + '</ul>';
-
-// const items = filtered.map(value => {
-//   const obj = { value: value };
-//   return obj;
-// }); 
-
-// Arrow function
-//const items = filtered.map(value => ({ value: value })); 
+// let sum = 0;
+// for (let value of numbers)
+//   sum += value;
 
 
+// Reduce method
 
-// Both filter and map methods return new array ( not modifying an array)
+// a = 0, c = 1 => a = 1
+// a = 1, c =15 => a = 16
+// a = 16, c = 22 => a = 38
+// a = 38, c = 3 => a = 41
 
-// therefore we can use chaining ( one method followed by another one)
+// const sum = numbers.reduce((accummulator, currentValue) =>{
+//   return accummulator + currentValue;
+// }, 0);
 
-const items = numbers
-  .filter(value => value >=0)
-  .map(value => ({ value: value }))
-  .filter(obj => obj.value >1)
-  .map(obj => obj.value);
 
-console.log(items);
+// we can make this code shorter.  
+
+const sum = numbers.reduce(
+  (accummulator, currentValue) => accummulator + currentValue);
+
+console.log(sum);  
