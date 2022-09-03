@@ -1,37 +1,14 @@
 
-// 18 - Excercise 4 - Blog Post Object.
+// 20 - Excercise 6 - Price range Object.
 
-// let post = {
-//   title: 'alfa',
-//   body: 'body',
-//   author: 'human',
-//   views: 10,
-//   comments: [
-//     { author: 'A', body: 'B'},
-//     { author: 'B', body: 'C'},
-//   ],
-//   isLive: true
-// };
+let priceRanges = [
+  {label:'$', tooltip: 'Inexpensive', minPerPerson: 0, maxPerPerson: 10 },
+  {label:'$$', tooltip: 'Moderate', minPerPerson: 11, maxPerPerson: 20 },
+  {label:'$$$', tooltip: 'Expensive', minPerPerson: 21, maxPerPerson: 50 },
+];
 
-function Post(title, body, author)  {
-  this.title = title;
-  this.body = body;
-  this.author = author;
-  this.views = 0;
-  this.comments = [];
-  this.isLive = false;
-}
+let restaurants = [
+  {averagePerPerson: 5 }
+];
 
-let post = new Post ('TITLE', 'BODY', 'AUTHOR');
-console.log(post);
-
-// let post = {
-//   title: 'alfa',
-//   body: 'body',
-//   author: 'human',
-//   views: 0,
-//   comments: [],
-//   isLive: false
-// };
-
-// console.log(post);
+console.log(priceRanges);
