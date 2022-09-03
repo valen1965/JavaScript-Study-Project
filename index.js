@@ -1,30 +1,22 @@
 // ARRAYS
-// 12 - Sorting Arrays.
+// 13 - Testing the Elements of an Array.
 
-// const numbers = [2, 3, 1];
-// numbers.sort();
-// console.log(numbers);
+const numbers = [1, -2, 3];
 
-// numbers.reverse();
-// console.log(numbers);
+//checking if all numbers in the array are positive
 
-const courses = [
-  { id: 1, name:'Node.js' },
-  { id: 2, name: 'javaScript' },
-];
-
-courses.sort(function(a, b) {
-  // a > b => -1
-  // a < b => 1
-  // a === b => 0
-
-  // converting to upper case
-  const nameA = a.name.toUpperCase();
-  const nameB = b.name.toUpperCase();
-
-  if (nameA < nameB) return -1;
-  if (nameA > nameB) return 1;
-  return 0;
+const allPositive = numbers.every(function(value) {
+    return value >= 0;
 });
 
-console.log(courses);
+console.log(allPositive);
+
+// arrow function
+const allPos = numbers.every(value => value >= 0);
+console.log(allPos);
+
+const atLeastOnePositive = numbers.some(function(value) {
+    return value >= 0;
+});
+
+console.log(atLeastOnePositive);
