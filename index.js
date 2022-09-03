@@ -1,17 +1,13 @@
 // ARRAYS
-// 10 - Iterating an Array.
+// 11 - Joining Arrays.
 
 const numbers = [1, 2, 3,];
+const joined = numbers.join(' / ');
+console.log(joined);
 
-// for(let number of numbers)
-//   console.log(number);
+const message = 'This is my first message';
+const parts = message.split(' ');
+console.log(parts);
 
-// numbers.forEach(function(number){
-//   console.log(number);
-// })  
-
-numbers.forEach((number, index) => console.log(index, number)); 
-
-
-for (let key in numbers)
-  console.log(key, numbers[key]);
+const combined = parts.join('--');
+console.log(combined);
