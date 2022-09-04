@@ -1,28 +1,30 @@
-// 22 - Excercise 6 - Get Max.
+// 23 - Excercise 7 - Movies.
+const movies = [
+  { title: 'a', year: 2018, rating: 4.5 },
+  { title: 'b', year: 2018, rating: 4.7 },
+  { title: 'c', year: 2018, rating: 3 },
+  { title: 'd', year: 2017, rating: 4.5 },
+]
 
-const numbers = [1, 2, 3, 4, 6];
+// All the movies in 2018 with rating > 4
+// Sort them by their rating
+// Descending order
+// Pick their title 
 
-const max = getMax([1,3]);
+//result  'b' and 'a'
 
-console.log(max);
+const titles = movies
+  .filter(movies => (movies.year === 2018) && (movies.rating >= 4))
+  .sort((a, b) => a.rating - b.rating )
+  .reverse()
+  .map(movies => movies.title)
 
-function getMax(array) {
-  if(array.length === 0) return undefined;
+console.log(titles); 
 
-  // let max = array[0];
 
-  // for (let i = 1; i < array.length; i++)
-  //   if (array[i] > max)
-  //     max = array[i];
-  // return max;
+// a = 4.5
+// b = 4
+// 4.5 - 4 = 0.5 => a > b
+  
 
   
-  //reduce method
-  
-  return array.reduce((a, b) => (a > b) ? a : b); 
-}
-
-// a - accummulator
-// b - current
-
-
