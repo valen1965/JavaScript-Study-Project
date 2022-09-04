@@ -13,18 +13,32 @@ const movies = [
 
 //result  'b' and 'a'
 
-const titles = movies
-  .filter(movies => (movies.year === 2018) && (movies.rating >= 4))
-  .sort((a, b) => a.rating - b.rating )
-  .reverse()
-  .map(movies => movies.title)
+// const titles = movies
+//   .filter(movies => (movies.year === 2018) && (movies.rating >= 4))
+//   .sort((a, b) => a.rating - b.rating )
+//   .reverse()
+//   .map(movies => movies.title)
 
-console.log(titles); 
+// console.log(titles); 
 
 
 // a = 4.5
 // b = 4
 // 4.5 - 4 = 0.5 => a > b
   
+const titles = movies
+.filter(function(movies){
+  return (movies.year === 2018) && (movies.rating >= 4)
+})
 
-  
+.sort(function(a, b){
+  return a.rating - b.rating
+ }) 
+
+ .reverse()
+
+ .map(function(movies){
+  return movies.title
+}) 
+
+console.log(titles);
