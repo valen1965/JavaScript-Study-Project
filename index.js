@@ -1,27 +1,28 @@
-// 21 - Excercise 5 - Count Occurences.
+// 22 - Excercise 6 - Get Max.
 
-// My solution
+const numbers = [1, 2, 3, 4, 6];
 
-const numbers = [1, 2, 3, 4, 1, 4];
+const max = getMax([1,3]);
 
-const count = countOccurances(numbers, 1);
+console.log(max);
 
-console.log(count);
+function getMax(array) {
+  if(array.length === 0) return undefined;
 
-// function countOccurances(array, searchElement) {
-//   const count = 0;
-//   for (let element of array)
-//     if (element === searchElement)
-//       count++;
-//   return count;
-// }
+  // let max = array[0];
 
-// reduce method
+  // for (let i = 1; i < array.length; i++)
+  //   if (array[i] > max)
+  //     max = array[i];
+  // return max;
 
-function countOccurances(array, searchElement) {
-    return array.reduce((accummulator, current) => {
-    const occurrence = (current === searchElement) ? 1: 0;
-    console.log(accummulator, searchElement, occurrence);
-    return accummulator + occurrence;
-  }, 0 );
+  
+  //reduce method
+  
+  return array.reduce((a, b) => (a > b) ? a : b); 
 }
+
+// a - accummulator
+// b - current
+
+
