@@ -1,11 +1,12 @@
-// 17 - Excercise 1 - Array from Range.
-const numbers = arrayFromRange(1, 10);
+// 18 - Excercise 2 - Includes.
+const numbers = [1, 2, 3, 4];
 
-console.log(numbers);
+console.log(includes(numbers, -1));
 
-function arrayFromRange(min, max) {
-    const output = [];   // creating an empty array
-    for (let i = min; i <= max; i++)
-        output.push(i);
-    return output;
-}
+function includes(array, searchElement) {
+        for (let element of array)
+            if (element === searchElement)
+                return true;
+        return false;         
+}  
+
