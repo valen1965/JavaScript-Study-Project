@@ -1,21 +1,16 @@
 
-// Functions  01 - Function Declaration vs Expressions
-
+// Functions  02 - Hoisting
+//  is the process of moving function declaration to the top of a file. Therefore we can define fnction before function declaration.            
 
 // Function declaration
+walk();
+
 function walk() {
   console.log('walk');
 }
 
-// //Named Function Expression.
-// let run = function walk() {
-//   console.log('run');
-// };
+run(); // can not define function before function expression.
 
-//Anonymous Function Expression.
 let run = function() {
   console.log('run');
 };
-let move = run;
-run();
-move();
