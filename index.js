@@ -1,10 +1,8 @@
 
-// Functions  03 - Arguments
-function sum() {
-  let total = 0;
-  for (let value of arguments)
-    total += value;
-  return total;  
+// Functions  04 - The Rest Operator.
+function sum(discount, ...prices) {
+ const total = prices.reduce((a, b) => a + b); 
+ return total * (1 - discount);
 }
 
-console.log(sum(1, 2, 3, 4, 45));
+console.log(sum(0.1, 20, 30, 1));
