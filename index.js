@@ -1,16 +1,10 @@
 
-// Functions  02 - Hoisting
-//  is the process of moving function declaration to the top of a file. Therefore we can define fnction before function declaration.            
-
-// Function declaration
-walk();
-
-function walk() {
-  console.log('walk');
+// Functions  03 - Arguments
+function sum() {
+  let total = 0;
+  for (let value of arguments)
+    total += value;
+  return total;  
 }
 
-run(); // can not define function before function expression.
-
-let run = function() {
-  console.log('run');
-};
+console.log(sum(1, 2, 3, 4, 45));
