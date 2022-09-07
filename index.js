@@ -1,44 +1,21 @@
-// 23 - Excercise 7 - Movies.
-const movies = [
-  { title: 'a', year: 2018, rating: 4.5 },
-  { title: 'b', year: 2018, rating: 4.7 },
-  { title: 'c', year: 2018, rating: 3 },
-  { title: 'd', year: 2017, rating: 4.5 },
-]
 
-// All the movies in 2018 with rating > 4
-// Sort them by their rating
-// Descending order
-// Pick their title 
-
-//result  'b' and 'a'
-
-// const titles = movies
-//   .filter(movies => (movies.year === 2018) && (movies.rating >= 4))
-//   .sort((a, b) => a.rating - b.rating )
-//   .reverse()
-//   .map(movies => movies.title)
-
-// console.log(titles); 
+// Functions  01 - Function Declaration vs Expressions
 
 
-// a = 4.5
-// b = 4
-// 4.5 - 4 = 0.5 => a > b
-  
-const titles = movies
-.filter(function(movies){
-  return (movies.year === 2018) && (movies.rating >= 4)
-})
+// Function declaration
+function walk() {
+  console.log('walk');
+}
 
-.sort(function(a, b){
-  return a.rating - b.rating
- }) 
+// //Named Function Expression.
+// let run = function walk() {
+//   console.log('run');
+// };
 
- .reverse()
-
- .map(function(movies){
-  return movies.title
-}) 
-
-console.log(titles);
+//Anonymous Function Expression.
+let run = function() {
+  console.log('run');
+};
+let move = run;
+run();
+move();
