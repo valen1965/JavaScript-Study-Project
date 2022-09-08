@@ -1,14 +1,25 @@
 
-// Functions  05 - Default Parameters.
-
-// function interest(principal, rate, years) {
-//   rate = rate || 3.5;
-//   years = years || 5;
-//   return principal * rate / 100 * years;
-// }
-
-function interest(principal, rate = 3.5, years = 5) {
-    return principal * rate / 100 * years;
+// Functions  06 - Getters & Setters.
+const person = {
+  firstName: 'Mosh',
+  lastName: 'Hamedani',
+  get fullName() {
+    return `${person.firstName} ${person.lastName}`
+  },
+  set fullName(value) {
+    const parts =value.split(' ');
+    this.firstName = parts[0];
+    this.lastName = parts[1];
   }
+};
 
-console.log(interest(10000));
+// console.log(`${person.firstName} ${person.lastName}`);
+
+// console.log(person.firstName  + ' ' + person.lastName);
+
+// person.fullName = 'John Smith';
+console.log(person);
+
+
+// getters => access properties
+// setters => change or mutate them
