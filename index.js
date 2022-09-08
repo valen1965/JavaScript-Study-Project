@@ -1,24 +1,31 @@
+// let stringArray = (['1', '2', '3']);
+// let numberArray = [];
+// length = stringArray.length;
 
-// Functions  Exercise 1 - Sum of Arguments.
+//      for (let i = 0; i < length; i++)
+//     numberArray.push(parseInt(stringArray[i]));
+    
+//     console.log(numberArray);
 
-// sum(1, 2, 3, 4) 
-// function sum () {
-//       let total = 0;
-//     for (let value of arguments)
-//         total += value;
-//     return total;    
-//   }
-  
-  
-//   console.log(sum(1, 2, 3, 4, 10));
-
-console.log(sum([1, 2, 3, 4, 20]));
-
-function sum(...items) {
-  console.log(items[0]);
-  if(items.length === 1 && Array.isArray(items[0]))
-    items = [...items[0]];
+// let stringArray = ['1', '2', '3', 4];
+// let numberArray = stringArray.map(Number);
+// console.log(numberArray);
 
 
-  return items.reduce((a, b) => a + b);
-}
+// method 3
+
+// let stringArray = ['1', '2', '3', '4', '5'];
+// let numberArray = [];
+
+// stringArray.forEach(element => numberArray.push(+ element));
+
+// console.log(numberArray);
+
+// method 4
+
+let stringArray = ['1', '2', '3', '4', '5', '7'];
+
+let numberArray = stringArray.reduce((acc, n) => acc.concat(+n), []);
+
+console.log(numberArray);
+
