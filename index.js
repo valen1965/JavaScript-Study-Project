@@ -1,54 +1,24 @@
 
-// Functions  11 - Changing This.
+// Functions  Exercise 1 - Sum of Arguments.
 
-// const video = {
-//   title: 'a',
-//   tags: ['c', 'd', 'e'],
-//   showTags() {
-//     this.tags.forEach(function(tag) {
-//       console.log(this.title , tag);
-//     }.bind(this));                  // bind method
+// sum(1, 2, 3, 4) 
+// function sum () {
+//       let total = 0;
+//     for (let value of arguments)
+//         total += value;
+//     return total;    
 //   }
-// };
-// video.showTags();
+  
+  
+//   console.log(sum(1, 2, 3, 4, 10));
+
+console.log(sum([1, 2, 3, 4, 20]));
+
+function sum(...items) {
+  console.log(items[0]);
+  if(items.length === 1 && Array.isArray(items[0]))
+    items = [...items[0]];
 
 
-const video = {
-  title: 'a',
-  tags: ['c', 'd', 'e'],
-  showTags() {
-    this.tags.forEach(tag => {      // arrow function method inherits this from the containing function
-      console.log(this.title , tag);
-    });                   
-  }
-};
-video.showTags();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// another approach to change this.
-
-// function playVideo() {
-//   console.log(this);
-// }
-
-// playVideo.call({ name: 'Mosh' }, 1, 2);  // diff withapply method
-// playVideo.apply({ name: 'Mosh' }, [1, 2]); // diff with call method
-// playVideo.bind({ name: 'Mosh' }) ();  // returns a new function and sets THIS to always point to this object permanently.
-
-
-
-// playVideo();
+  return items.reduce((a, b) => a + b);
+}
