@@ -9,10 +9,15 @@ const restaurants = [
   { id: 4, name: 'Fish', from: 0900, till: 2300 },
 ]; 
 
-const time = 0600;
+
+let today = new Date();
+let timeNow = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+
+console.log(timeNow);
+timeNow = 0800;
 
 const open = restaurants
-  .filter(r => time >= r.from && time <= r.till)
+  .filter(r => timeNow >= r.from && timeNow <= r.till)
   .sort((a) => a.till)
   .reverse()
   .map(r => r.name + ' ' + r.from + ' ' + r.till)
@@ -22,3 +27,11 @@ const open = restaurants
   else  
     console.log(open); 
  
+
+
+
+
+// let today = new Date();
+// let date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+
+// console.log(date);
