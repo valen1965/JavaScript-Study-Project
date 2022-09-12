@@ -15,5 +15,5 @@ function move(array, index, offset) {
   const newArray = [...array];
   const element = newArray.splice(index, 1)[0];
   newArray.splice(position, 0, element);
-  return(newArray);  
+  return newArray;  
 }
