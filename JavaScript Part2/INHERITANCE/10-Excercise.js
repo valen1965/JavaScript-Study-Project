@@ -54,3 +54,5 @@ function Stopwatch() {
 
 const sw = new Stopwatch();
 sw.duration = 10;
+
+// bad idea. this stopwatch object is uselless since we are able to modify duration property from outside of the object.
